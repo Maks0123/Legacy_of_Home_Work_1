@@ -9,39 +9,17 @@ namespace Heritage
     class Program
     {
 
-        #region Output Hello World
-        private string str = "Hello world!!!";
-
-        #region void constructor
-        Program(){}
-        #endregion
-
-        #region 
-        Program(string str)
-        {
-            str = this.str;
-        }
-        #endregion
-
-        #region 
-        public void Hello ()
-         {
-            Console.WriteLine("Hello world!!!");
-         }
-        #endregion
-
-        #endregion
-
         static void Main(string[] args)
         {
-            #region Output Hello World
-            Program str = new Program();
-            str.Hello();
+        
+
+            People people = new People();
+            people.Print();
+
+
             Console.ReadKey();
-            #endregion
 
-
-
+          
         }
     }
 }

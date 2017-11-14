@@ -26,6 +26,18 @@ namespace Heritage
         List<string> LTown;
         #endregion
 
+        #region Constructor
+        public People()
+        {
+             this.id = 1;
+             this.Age = 18;
+             this.FirstName = "Danil";
+             this.LastName = "Hobich";
+             this.Mail = "M";
+             this.Town = "Kiev";
+        }
+        #endregion
+
         #region Get Peoplse
         public int GetAge
         {
@@ -87,23 +99,16 @@ namespace Heritage
 
         public void Print()
         {
-            int i = 4;
-
-            while (i > 0)
-            {
-                i--;
-                i = i;
-
-               foreach (object e in Lid )
-               {
-                      
-               }
-
-            }
+            Console.WriteLine("                                                                                   ");
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.ForegroundColor = ConsoleColor.Black;
+            Console.WriteLine("                       ***          CLASS PEOPLE        ***                        ");
+            Console.WriteLine("   ______________________________________________________________________________  ");
+            Console.WriteLine("  |  id    |    Age    |    FirstName    |    LastName    |    Mail    |   Town  | ");
+            Console.WriteLine("   ------------------------------------------------------------------------------  ");
+            Console.WriteLine("  |   " + id + "    |    " + Age + "     |     " + FirstName + "       |     " + LastName + "     |     " + Mail + "      |   " + Town + "  | ");
+            Console.WriteLine("   ------------------------------------------------------------------------------  ");
+            Console.WriteLine("                                                                                   ");
         }
-
-
-
-
     }
 }
