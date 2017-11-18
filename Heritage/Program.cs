@@ -11,15 +11,28 @@ namespace Heritage
 
         static void Main(string[] args)
         {
-        
+           
+            People people = new People("David", "Lognov", 24, 'F', "California");
+            Console.WriteLine(people);
+            Console.WriteLine();
 
-            People people = new People();
-            people.Print();
+            Student student = new Student("Oleg", "Petrovsky", 18, 1, "Ingener");
+            Console.WriteLine(student);
+            Console.WriteLine();
 
+            Aspirant aspirant = new Aspirant("Nickolay", "Fomin", 27, "Optic tonight");
+            Console.WriteLine(aspirant);
+            Console.WriteLine();
 
-            Console.ReadKey();
+            Teacher teacher = new Teacher("Alex", "Swarc", 32, "Doctor House", "|Mathametic");
+            Console.WriteLine(teacher);
+            Console.WriteLine();
 
-          
+            Professor professor = new Professor("Devid", "Oushen", 45, "Electromagnatics wavуы");
+            Console.WriteLine(professor);
+            Console.WriteLine();
+
+            Console.ReadKey();          
         }
     }
 }

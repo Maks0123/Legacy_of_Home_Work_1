@@ -14,8 +14,9 @@ namespace Heritage
         #endregion
 
         #region Constructor
-        Student(int course, string specialization, int age, string firstname, string lastname) : base (age, firstname, lastname)
+        public Student(string firstname, string lastname, int age, int course, string specialization) : base (age, firstname, lastname)
         {
+            Console.WriteLine(firstname + " " + lastname + " " + age + " " + course + " " + specialization);
             this.Course = course;
             this.Specialization = specialization;
         }

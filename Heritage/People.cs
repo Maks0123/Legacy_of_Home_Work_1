@@ -27,23 +27,26 @@ namespace Heritage
 
         #region Constructors
 
+     
+
+        public People(string firstname, string lastname, int age, char mail, string town)
+        {
+            Console.WriteLine(firstname+ " " + lastname + " " + age + " " + mail + " " + town);
+            FirstName = firstname;
+            LastName = lastname;
+            Age = age;
+            this.Mail = mail;
+            this.Town = town;
+           
+        }
+
         public People(int age, string firstname, string lastname)
         {
 
             Age = age;
             FirstName = firstname;
             LastName = lastname;
-         
-        }
 
-        People(int age, string firstname, string lastname, char mail, string town)
-        {
-    
-             Age = age;
-             FirstName = firstname;
-             LastName = lastname;
-             this.Mail = mail;
-             this.Town = town;
         }
         #endregion
 
@@ -79,8 +82,6 @@ namespace Heritage
             set { LastName = value; }
         }
         #endregion
-
-      
-       
+ 
     }
 }
