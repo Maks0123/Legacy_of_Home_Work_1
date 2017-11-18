@@ -13,6 +13,14 @@ namespace Heritage
         private string Specialization;
         #endregion
 
+        #region Constructor
+        Student(int course, string specialization, int age, string firstname, string lastname) : base (age, firstname, lastname)
+        {
+            this.Course = course;
+            this.Specialization = specialization;
+        }
+        #endregion 
+
         #region GetSet
         public int SetCourse
         {
@@ -27,17 +35,5 @@ namespace Heritage
         }
 
         #endregion
-
-        public Student()
-        {
-              Course = 3;
-              Specialization = "Manager";
-              
-        }
-
-        public void Print()
-        {
-            GetLastName = "Voir";
-        }
     }
 }

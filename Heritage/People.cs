@@ -10,11 +10,10 @@ namespace Heritage
     class People
     {
         #region Field   
-        private int id;
-        private int Age;
-        private string FirstName;
-        private string LastName;
-        private string Mail;
+        public int Age;
+        public string FirstName;
+        public string LastName;
+        private char Mail;
         private string Town;
         #endregion
 
@@ -26,15 +25,25 @@ namespace Heritage
         List<string> LTown;
         #endregion
 
-        #region Constructor
-        public People()
+        #region Constructors
+
+        public People(int age, string firstname, string lastname)
         {
-             this.id = 1;
-             this.Age = 18;
-             this.FirstName = "Danil";
-             this.LastName = "Hobich";
-             this.Mail = "M";
-             this.Town = "Kiev";
+
+            Age = age;
+            FirstName = firstname;
+            LastName = lastname;
+         
+        }
+
+        People(int age, string firstname, string lastname, char mail, string town)
+        {
+    
+             Age = age;
+             FirstName = firstname;
+             LastName = lastname;
+             this.Mail = mail;
+             this.Town = town;
         }
         #endregion
 
@@ -46,7 +55,7 @@ namespace Heritage
 
         }
 
-        public string GetMail
+        public char GetMail
         {
             get { return Mail; }
             set { Mail = value; }
@@ -69,46 +78,9 @@ namespace Heritage
             get { return LastName; }
             set { LastName = value; }
         }
-
-        public int Getid
-        {
-            get { return id; }
-            set { id = value; }
-        }
-
         #endregion
 
-        void AddArray()
-        {
-            Age = 18; FirstName = "Nick"; Mail = "M"; Town = "Kiev"; id = 1;
-            Lid.Add(id); LAge.Add(Age); LName.Add(FirstName); LMail.Add(Mail); LTown.Add(Town);
-
-            Age = 18; FirstName = "Poli"; Mail = "F"; Town = "Kiev"; id = 1;
-            Lid.Add(id); LAge.Add(Age); LName.Add(FirstName); LMail.Add(Mail); LTown.Add(Town);
-
-            Age = 18; FirstName = "Nick"; Mail = "F"; Town = "Kiev"; id = 1;
-            Lid.Add(id); LAge.Add(Age); LName.Add(FirstName); LMail.Add(Mail); LTown.Add(Town);
-
-            Age = 18; FirstName = "Nick"; Mail = "F"; Town = "Kiev"; id = 1;
-            Lid.Add(id); LAge.Add(Age); LName.Add(FirstName); LMail.Add(Mail); LTown.Add(Town);
-
-            Age = 18; FirstName = "Nick"; Mail = "F"; Town = "Kiev"; id = 1;
-            Lid.Add(id); LAge.Add(Age); LName.Add(FirstName); LMail.Add(Mail); LTown.Add(Town);
-        }
-
-
-        public void Print()
-        {
-            Console.WriteLine("                                                                                   ");
-            Console.BackgroundColor = ConsoleColor.White;
-            Console.ForegroundColor = ConsoleColor.Black;
-            Console.WriteLine("                       ***          CLASS PEOPLE        ***                        ");
-            Console.WriteLine("   ______________________________________________________________________________  ");
-            Console.WriteLine("  |  id    |    Age    |    FirstName    |    LastName    |    Mail    |   Town  | ");
-            Console.WriteLine("   ------------------------------------------------------------------------------  ");
-            Console.WriteLine("  |   " + id + "    |    " + Age + "     |     " + FirstName + "       |     " + LastName + "     |     " + Mail + "      |   " + Town + "  | ");
-            Console.WriteLine("   ------------------------------------------------------------------------------  ");
-            Console.WriteLine("                                                                                   ");
-        }
+      
+       
     }
 }
